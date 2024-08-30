@@ -1,0 +1,167 @@
+/* Custom CSS */
+
+/* Header menu */
+.header_menu {
+    background-color: #ffffff;
+  }
+  
+  .navbar-brand img {
+    max-height: 60px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ff0000;
+  }
+  
+  /* Products section */
+  .products {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .single_product {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .single_product:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product_img {
+    position: relative;
+  }
+  
+  .product_img img {
+    max-width: 100%;
+  }
+  
+  .new_product {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .product-caption h4 {
+    margin-top: 15px;
+  }
+  
+  .price {
+    font-size: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 50px 0;
+  }
+  
+  .footer_title h3 {
+    color: #ffffff;
+  }
+  
+  .footer_links ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .footer_links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer_links ul li a {
+    color: #ffffff;
+  }
+  
+  .footer_links ul li a:hover {
+    color: #ff0000;
+  }
+  
+  .border-top {
+    border-top: 1px solid #ffffff;
+  }
+  
+  /* Back to top button */
+  .backtop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+  }
+  
+  .backtop a {
+    background-color: #ffffff;
+    color: #343a40;
+    border-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 50%;
+  }
+  
+  .backtop a:hover {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  /* Basic styling for the filters */
+  .filters {
+      width: 30%;
+      float: left;
+      padding: 20px;
+      background-color: #f8f9fa;
+  }
+  
+  .filters h4 {
+      margin-bottom: 20px;
+  }
+  
+  .filters ul {
+      list-style: none;
+      padding: 0;
+  }
+  
+  .filters ul li {
+      padding: 8px 0;
+  }
+  
+  .price-range {
+      margin-top: 20px;
+  }
+  
+  /* Basic styling for the products */
+  .products-list {
+      width: 70%;
+      float: right;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+  }
+  
+  .products-list .product {
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 0 10px 10px 0; /* Adjust margin as needed */
+  }
+  
+  .products-list .product .product-img img {
+      max-width: 100%;
+      height: auto;
+  }
+  
+  .products-list .product .product-caption {
+      margin-top: 15px;
+  }
+  
+  .products-list .product .product-rating {
+      color: #ffc107;
+  }
+  
+  .products-list .product .price {
+      margin-top: 10px;
+  }
+  

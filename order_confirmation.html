@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmation</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    .order_confirmation {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 30px;
+    }
+
+    .section_title h1 {
+        color: #333;
+    }
+
+    .success_tick {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    h6 {
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .badge {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+  }
+
+  /* Primary button hover effect */
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  /* Primary button click effect */
+  .btn-primary:active {
+    transform: translateY(1px);
+  }
+
+</style>
+</head>
+<body>
+  
+
+<!-- ==============order confirmation starts here============== -->
+<section class="order_confirmation py-5 my-5" id="order_confirmation">
+    <div class="container">
+        <div class="section_title text-center mb-5">
+            <h1 class="text-uppercase">Order Confirmation</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <div>
+                    <i class="fas fa-check-circle fa-5x success_tick"></i>
+                </div>
+                <div>
+                    <h2>Thank You for Your Purchase!</h2>
+                    <h6>A confirmation email has been sent to <b>xyz@gmail.com</b></h6>
+                    <h6><span class="mr-2">Order No:</span><span><b>123123123123</b></span></h6>
+                    <h6><span class="mr-2">Order Status:</span><span><b><span class="badge badge-danger">Pending</span></b></span></h6>
+                    <a href="index.html" class="btn btn-primary btn-lg mt-5">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ==============order confirmation ends here============== -->
+
+</body>
+</html>

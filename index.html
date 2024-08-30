@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Store</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Custom CSS */
+        /* Header menu */
+        .header_menu {
+            background-color: #ffffff;
+        }
+
+        /* CSS */
+        .img-fluid {
+            max-width: 100%;
+            /* Ensure the image does not exceed its container */
+            border-radius: 10px;
+            /* Add rounded corners */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Add a subtle box shadow */
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            /* Add transition effects */
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.05);
+            /* Scale up on hover */
+            opacity: 0.9;
+            /* Reduce opacity on hover */
+        }
+
+        .navbar-brand img {
+            max-height: 60px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff0000;
+        }
+
+        /* Products section */
+        .products {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .single_product {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .single_product:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product_img {
+            position: relative;
+        }
+
+        .product_img img {
+            max-width: 100%;
+        }
+
+        .new_product {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .product-caption h4 {
+            margin-top: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 50px 0;
+        }
+
+        .footer_title h3 {
+            color: #ffffff;
+        }
+
+        .footer_links ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer_links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer_links ul li a {
+            color: #ffffff;
+        }
+
+        .footer_links ul li a:hover {
+            color: #ff0000;
+        }
+
+        .border-top {
+            border-top: 1px solid #ffffff;
+        }
+
+        /* Back to top button */
+        .backtop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+        }
+
+        .backtop a {
+            background-color: #ffffff;
+            color: #343a40;
+            border-color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 50%;
+        }
+
+        .backtop a:hover {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        .cart-icon {
+            cursor: pointer;
+        }
+
+        /* Search bar style */
+        .search-form {
+            position: relative;
+            margin-left: auto;
+        }
+
+        .search-form input {
+            width: 250px;
+            height: 38px;
+            border-radius: 19px;
+            padding-left: 38px;
+            border: 1px solid #ccc;
+        }
+
+        .search-form .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header menu section starts here -->
+    <section class="header_menu" id="header_menu">
+        <div class="container-fluid px-0 shadow">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 ">
+                <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+                    <img src="assets/image/Easy  shop logo.png" class="img img-fluid" width="120px" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product view.html">Product view</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about us.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact us.html">Contact us</a>
+                        </li>
+                    </ul>
+                    <!-- Search bar -->
+                    <div class="search-form">
+                        <input type="text" placeholder="Search">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <!-- End of Search bar -->
+                    <div class="cart-section ml-3">
+                        <span class="cart-icon" onclick="openCartPage()"><i class="fas fa-shopping-cart"></i></span>
+                        <!-- Replace "C" with Font Awesome cart icon -->
+                        <!-- Add other elements of the cart section here -->
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- Header menu section ends here -->
+
+    <h1 class="text-center mt-5">Hello, world!</h1>
+
+    <!-- Products section -->
+    <section class="products mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4 col-12">
+                    <div class="single_product shadow text-center p-1 mt-small-5 mb-small-5">
+                        <div class="product_img">
+                            <a href="product_detail.html"><img src="assets/image/product1.jpeg"
+                                    class="img img-fluid" alt=""></a>
+                            <div class="new_product">
+                                <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+                            </div>
+                        </div>
+                        <div class="product-caption my-3">
+                            <div class="product-ratting">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="product_detail.html">Green Dress with details</a></h4>
+                            <div class="price">
+                                <b><span class="mr-1">₹</span><span>1200</span></b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4 col-12">
+                    <div class="single_product shadow text-center p-1 mt-small-5 mb-small-5">
+                        <div class="product_img">
+                            <a href="product_detail.html"><img src="assets/image/product2.jpeg"
+                                    class="img img-fluid" alt=""></a>
+                            <div class="new_product">
+                                <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+                            </div>
+                        </div>
+                        <div class="product-caption my-3">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="product_detail.html">Men's shirt</a></h4>
+                            <div class="price">
+                                <b><span class="mr-1">₹</span><span>800</span></b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4 col-12">
+                    <div class="single_product shadow text-center p-1 mt-small-5 mb-small-5">
+                        <div class="product_img">
+                            <a href="product_detail.html"><img src="assets/image/product3.jpeg"
+                                    class="img img-fluid" alt=""></a>
+                            <div class="new_product">
+                                <span class="badge py-2 px-3 badge-pill badge-danger">New</span>
+                            </div>
+                        </div>
+                        <div class="product-caption my-3">
+                            <div class="product-ratting">
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star low-star"></i>
+                                <i class="far fa-star low-star"></i>
+                            </div>
+                            <h4><a href="product_detail.html">Baby Girl dress</a></h4>
+                            <div class="price">
+                                <b><span class="mr-1">₹</span><span>500</span></b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Products section ends here -->
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>New Products</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="#">Woman Cloth</a></li>
+                            <li><a href="#">Fashion Accessories</a></li>
+                            <li><a href="#">Man Accessories</a></li>
+                            <li><a href="#">Rubber made Toys</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="footer_title pt-3 mb-3">
+                        <h3>Support</h3>
+                    </div>
+                    <div class="footer_links">
+                        <ul>
+                            <li><a href="#">Frequently Asked Questions</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Report a Payment Issue</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-top">
+            <h6 class="text-center mt-3">Copyright ©2024 All rights reserved</h6>
+        </div>
+    </footer>
+    <!-- Footer ends here -->
+
+    <!-- Back to top button -->
+    <div class="backtop">
+        <a id="button" href="#top" class="btn btn-lg btn-outline-danger" role="button">
+            <i class="fas fa-chevron-up text-dark"></i>
+        </a>
+    </div>
+    <!-- Back to top button ends here -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7ni u735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function openCartPage() {
+            // Replace 'cart.html' with the actual path to your cart page
+            window.location.href = 'cart.html';
+        }
+    </script>
+</body>
+
+</html>

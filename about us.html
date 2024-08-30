@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <!-- Add Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Add Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    .header_menu {
+        background-color: #ffffff;
+    }
+
+    /* CSS */
+    .img-fluid {
+        max-width: 100%;
+        /* Ensure the image does not exceed its container */
+        border-radius: 10px;
+        /* Add rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* Add a subtle box shadow */
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        /* Add transition effects */
+    }
+
+    .img-fluid:hover {
+        transform: scale(1.05);
+        /* Scale up on hover */
+        opacity: 0.9;
+        /* Reduce opacity on hover */
+    }
+
+    .navbar-brand img {
+        max-height: 60px;
+    }
+
+    .navbar-nav .nav-link {
+        color: #000000;
+        font-weight: bold;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #ff0000;
+    }
+
+    /* Custom CSS */
+    .about {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .section_title h1 {
+      text-transform: capitalize;
+    }
+
+    .about img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .about_text p {
+      margin-bottom: 1rem;
+    }
+
+    .testimonial p {
+      margin-bottom: 1rem;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 4%;
+      font-size: 2rem;
+    }
+
+    .carousel-inner {
+      border-radius: 15px;
+    }
+
+    .border {
+      border: 1px solid #dee2e6 !important;
+    }
+
+    .service-icon {
+      margin-bottom: 1rem;
+    }
+
+    .service-icon i {
+      font-size: 3rem;
+      color: #333;
+    }
+
+    /* Increase image size */
+    .about img {
+      max-width: 100%;
+      height: 400px; /* Adjust height as needed */
+      object-fit: cover;
+    }
+
+    /* Smaller avatar image */
+    .avatar img {
+      max-width: 80px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header_menu" id="header_menu">
+    <div class="container-fluid px-0 shadow">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 ">
+            <a class="navbar-brand pl-5 pl-small-0" href="index.html">
+                <img src="assets/image/Easy  shop logo.png" class="img img-fluid" width="120px" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product view.html">Product view</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about us.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact us.html">Contact us</a>
+                    </li>
+                </ul>
+                <!-- Search bar -->
+                <div class="search-form">
+                    <input type="text" placeholder="Search">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <!-- End of Search bar -->
+                <div class="cart-section ml-3">
+                    <span class="cart-icon" onclick="openCartPage()"><i class="fas fa-shopping-cart"></i></span>
+                    <!-- Replace "C" with Font Awesome cart icon -->
+                    <!-- Add other elements of the cart section here -->
+                </div>
+            </div>
+        </nav>
+    </div>
+  </section>
+  <!-- Header menu section ends here -->
+
+  <!-- About Us Section -->
+  <section class="about py-5 my-5" id="about">
+    <div class="container">
+      <div class="section_title text-center mb-5">
+        <h1 class="text-capitalize">About Us</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <img src="assets/image/About us.jpeg" class="img img-fluid rounded shadow-lg" alt="about us image">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="title">
+                <h3>Our Mission</h3>
+              </div>
+              <div class="about_text mt-sm-5">
+                <p>
+                  Easy Shop is committed to providing customers with high-quality products and exceptional service. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices, felis a convallis tempus, ante velit malesuada justo, ut fermentum mi arcu nec dui. Proin ullamcorper turpis a diam malesuada sodales. Mauris vitae metus nec libero consequat ultricies.
+                </p>
+                <p>
+                  Our mission is to make shopping convenient and enjoyable for everyone. We strive to offer a wide range of products, fast delivery, and excellent customer support. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices, felis a convallis tempus, ante velit malesuada justo, ut fermentum mi arcu nec dui. Proin ullamcorper turpis a diam malesuada sodales. Mauris vitae metus nec libero consequat ultricies.
+                </p>
+                <p>
+                  At Easy Shop, we believe in building long-term relationships with our customers. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices, felis a convallis tempus, ante velit malesuada justo, ut fermentum mi arcu nec dui. Proin ullamcorper turpis a diam malesuada sodales. Mauris vitae metus nec libero consequat ultricies.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <!-- Testimonial Section -->
+        <div class="col-md-10 col-10 mx-auto">
+          <div id="carousel-example-1" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">
+              <!-- First Testimonial -->
+              <div class="carousel-item active">
+                <div class="testimonial">
+                  <div class="avatar mx-auto mb-4">
+                    <img src="assets/image/avater img.jpeg" class="rounded-circle img-fluid"
+                      alt="First sample avatar image">
+                  </div>
+                  <p>
+                    <i class="fas fa-quote-left"></i> Easy Shop is a dynamic e-commerce platform founded with the vision of simplifying online shopping for customers around the globe. Established by entrepreneur Tarun Kumar, Easy Shop aims to provide an intuitive and hassle-free shopping experience, catering to a diverse range of consumer needs.
+                  </p>
+                  <h4 class="font-weight-bold">Tarun Kumar</h4>
+                  <h6 class="font-weight-bold my-3">Founder at Easy Shop Company</h6>
+                  <i class="fas fa-star blue-text"></i>
+                  <i class="fas fa-star blue-text"></i>
+                  <i class="fas fa-star blue-text"></i>
+                  <i class="fas fa-star blue-text"></i>
+                  <i class="fas fa-star-half-alt blue-text"></i>
+                </div>
+              </div>
+              
+      </div>
+      <!-- Service Offerings -->
+      <div class="row mt-5">
+        <div class="col-md-3 col-6">
+          <div class="card border-dark mb-3">
+            <div class="card-body text-center">
+              <div class="service-icon mb-3">
+                <i class="far fa-credit-card fa-3x"></i>
+              </div>
+              <h5 class="card-title">Credit Card Support</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card border-primary mb-3">
+            <div class="card-body text-center">
+              <div class="service-icon mb-3">
+                <i class="fas fa-laptop fa-3x"></i>
+              </div>
+              <h5 class="card-title">Online Order</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card border-success mb-3">
+            <div class="card-body text-center">
+              <div class="service-icon mb-3">
+                <i class="fas fa-shipping-fast fa-3x"></i>
+              </div>
+              <h5 class="card-title">Fast Delivery</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="card border-danger mb-3">
+            <div class="card-body text-center">
+              <div class="service-icon mb-3">
+                <i class="fas fa-gifts fa-3x"></i>
+              </div>
+              <h5 class="card-title">Product with Gift</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Service Offerings -->
+    </div>
+  </section>
+  <!-- End About Us Section -->
+
+  <!-- Add Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

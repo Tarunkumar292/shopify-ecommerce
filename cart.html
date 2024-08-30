@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome Script -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            /* Use flexbox */
+        }
+
+        .left-side {
+            flex: 1;
+            /* Take up remaining space */
+        }
+
+        .right-side {
+            width: 300px;
+            /* Fixed width for order summary */
+            margin-left: 20px;
+            /* Add margin between left and right side */
+        }
+
+        /* Cart Section */
+        .cart {
+            padding: 20px 0;
+        }
+
+        /* Cart Item Card */
+        .mb-3 {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            /* Add margin between cart items */
+        }
+
+        /* Product Image */
+        .rounded img {
+            max-width: 100%;
+            height: auto;
+            max-height: 150px;
+            /* Limit the height of the image */
+        }
+
+        /* Quantity Buttons */
+        .btn-outline-primary {
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .quantity {
+            width: 50px;
+            text-align: center;
+        }
+
+        /* Order Summary Card */
+        .order-summary {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .list-group-item {
+            border: none;
+        }
+
+        .list-group-item span {
+            font-weight: bold;
+        }
+
+        /* Flipkart Cart Specific Styles */
+        .cart-heading {
+            background-color: #2874f0;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .item-price {
+            color: #212121;
+        }
+
+        .remove-item {
+            color: #2874f0;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Go to Checkout Button */
+        .checkout-btn {
+            background-color: #2874f0;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .checkout-btn:hover {
+            background-color: #1e4ba7;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Cart Section -->
+    <section class="cart py-5 my-5" id="cart">
+        <div class="container">
+            <div class="left-side">
+                <div class="section_title text-center mb-5">
+                    <h1 class="text-capitalize">Cart</h1>
+                </div>
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-12">
+                        <!-- Card -->
+                        <div class="mb-3">
+                            <div class="pt-4">
+                                <div class="cart-heading text-center">
+                                    Cart (<span>2</span> items)
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-md-5 col-lg-3 col-xl-3">
+                                        <div class="rounded mb-3 mb-md-0">
+                                            <img class="img-fluid w-100 rounded" src="assets/image/productview5.jpeg"
+                                                alt="Sample">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-lg-9 col-xl-9">
+                                        <div>
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <h5>Black denim shirt</h5>
+                                                    <p class="mb-0 small">Color: black</p>
+                                                    <p class="mb-0 small">Size: M</p>
+                                                </div>
+                                                <div>
+                                                    <div class="mb-0 w-100">
+                                                        <button
+                                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                            class="btn btn-sm btn-outline-primary">
+                                                            <i class="fas fa-minus">-</i>
+                                                        </button>
+                                                        <input class="quantity text-center" min="0" max="10"
+                                                            name="quantity" value="1" type="number">
+                                                        <button
+                                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                            class="btn btn-sm btn-outline-primary">
+                                                            <i class="fas fa-plus">+</i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div>
+                                                    <span class="remove-item">Remove</span>
+                                                </div>
+                                                <p class="mb-0 item-price"><strong>₹400</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="mb-4">
+                                <div class="row mb-4">
+                                    <div class="col-md-5 col-lg-3 col-xl-3">
+                                        <div class="rounded mb-3 mb-md-0">
+                                            <img class="img-fluid w-100 rounded" src="assets/image/cart1.jpeg"
+                                                alt="Sample">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 col-lg-9 col-xl-9">
+                                        <div>
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+                                                    <h5>Red hoodie</h5>
+                                                    <p class="mb-0 small">Color: Red</p>
+                                                    <p class="mb-0 small">Size: M</p>
+                                                </div>
+                                                <div>
+                                                    <div class="mb-0 w-100">
+                                                        <button
+                                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                            class="btn btn-sm btn-outline-primary">
+                                                            <i class="fas fa-minus">-</i>
+                                                        </button>
+                                                        <input class="quantity text-center" min="0" max="10"
+                                                            name="quantity" value="1" type="number">
+                                                        <button
+                                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                            class="btn btn-sm btn-outline-primary">
+                                                            <i class="fas fa-plus">+</i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                                <div>
+                                                    <span class="remove-item">Remove</span>
+                                                </div>
+                                                <p class="mb-0 item-price"><strong>₹850</strong></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Order Summary -->
+            <div class="right-side">
+                <div class="order-summary">
+                    <h5 class="mb-3">Order summary</h5>
+                    <ul class="list-group list-group-flush">
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2">
+                            <span>Black Denium Shirt</span>
+                            <span>x1</span>
+                            <span>₹400</span>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-2">
+                            <span>Red hoodie</span>
+                            <span>x1</span>
+                            <span>₹850</span>
+                        </li>
+                        <li
+                            class="list-group-item d-flex justify-content-between align-items-center border-top px-0 mb-3">
+                            <div>
+                                <strong>Total amount</strong>
+                                <p class="mb-0">(including VAT)</p>
+                            </div>
+                            <span><strong>₹1250</strong></span>
+                        </li>
+                    </ul>
+                    <a href="checkout.html" class="btn btn-primary btn-block checkout-btn">Proceed to Checkout</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
